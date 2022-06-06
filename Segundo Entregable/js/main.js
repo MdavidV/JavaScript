@@ -1,52 +1,34 @@
-const pilot1 = {
-    name: 'Pecco Bagnaia',
-    numPilot: '63',
-    min: minRandomize(1, 3),
-    sec: secRandomize(20, 60),
-    ms: msRandomize(100, 1001)
-}
-const pilot2 = {
-    name: 'Enea Bastianini',
-    numPilot: '23',
-    min: minRandomize(1, 3),
-    sec: secRandomize(20, 60),
-    ms: msRandomize(100, 1001)
-}
-const pilot3 = {
-    name: 'Jack Miller',
-    numPilot: '93',
-    min: minRandomize(1, 3),
-    sec: secRandomize(20, 60),
-    ms: msRandomize(100, 1001)
-}
-const pilot4 = {
-    name: 'Fabio Quartararo',
-    numPilot: '20',
-    min: minRandomize(1, 3),
-    sec: secRandomize(20, 60),
-    ms: msRandomize(100, 1001)
-}
-const pilot5 = {
-    name: 'Marco Bezzechi',
-    numPilot: '72',
-    min: minRandomize(1, 3),
-    sec: secRandomize(20, 60),
-    ms: msRandomize(100, 1001)
-}
-const pilot6 = {
-    name: 'Marc Marquez',
-    numPilot: '93',
-    min: minRandomize(1, 3),
-    sec: secRandomize(20, 60),
-    ms: msRandomize(100, 1001)
-}
-const pilot7 = {
-    name: 'Aleis Espargaro',
-    numPilot: '41',
-    min: minRandomize(1, 3),
-    sec: secRandomize(20, 60),
-    ms: msRandomize(100, 1001)
-}
+var ms = 0,
+    min = 0,
+    times = 0,
+    convertedTimes = 0,
+    auxCont = 0,
+    pilotsCont = 0,
+    btn = document.getElementById("btn-start"),
+    pilotsNames = ['Pecco Bagnaia # 63', 'Jack Miller # 43', 'Aleix Espargaro # 41', 'Enea Bastianini # 23', 'Fabio Quartararo # 20'],
+    pilot01 = timerRandomize(0, 5),
+    pilotsTimer = [];
+
+
+
+
+
+const reload = document.getElementById('reload');
+
+reload.addEventListener('click', _ => { // el _ es para indicar la ausencia de parametros
+    location.reload();
+});
+
+
+
+
+
+do {
+    ms = timerRandomize(78000, 96000);
+    times = ms;
+    pilotsTimer.push(times);
+    pilotsCont++;
+} while (pilotsCont < 5);
 
 
 
@@ -58,38 +40,104 @@ const pilot7 = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  FUNCIONES GENERADORAS DE TIEMPO
-
-function minRandomize(min, max){
+function timerRandomize(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function secRandomize(min, max){
-    return Math.floor(Math.random() * (max - min)) + min;
+
+function converterMsToMinutes() {
+    parseFloat(min = (auxCont / 1000) / 60);
+    min = min.toFixed(2);
+    convertedTimes = min + ':' + auxCont.toString().substr(0, 3);
+    return convertedTimes;
 }
 
-function msRandomize(min, max){
-    return Math.floor(Math.random() * (max - min)) + min;
+
+
+
+function whoWins() {
+    function comparatorTimer() {
+        pilotsTimer.forEach(element => {
+            if (auxCont == 0) {
+                auxCont = element;
+            } else {
+                if (auxCont > element) {
+                    auxCont = element;
+                }
+            }
+            return auxCont;
+        })
+    }
+    function winner() {
+        converterMsToMinutes();
+        var caja = document.createElement('div');
+        var fotoPiloto;
+        var ganador = document.createTextNode('Fastest lap:  ' + pilotsNames[pilot01] + ' - ' + convertedTimes);
+
+        caja.appendChild(ganador);
+        switch (pilot01) {
+            case 0:
+                fotoPiloto = document.createElement('img');
+                fotoPiloto.setAttribute('src', 'assets/pecco.jpg');
+                fotoPiloto.setAttribute('class', 'pecco')
+                break;
+            case 1:
+                fotoPiloto = document.createElement('img');
+                fotoPiloto.setAttribute('src', 'assets/miller.jpg');
+                fotoPiloto.setAttribute('class', 'miller');
+                break;
+            case 2:
+                fotoPiloto = document.createElement('img');
+                fotoPiloto.setAttribute('src', 'assets/espargaro.jpg');
+                fotoPiloto.setAttribute('class', 'espargaro');
+                break;
+            case 3:
+                fotoPiloto = document.createElement('img');
+                fotoPiloto.setAttribute('src', 'assets/bastianini.jpg');
+                fotoPiloto.setAttribute('class', 'bastianini');
+                break;
+            case 4:
+                fotoPiloto = document.createElement('img');
+                fotoPiloto.setAttribute('src', 'assets/quartararo.jpg');
+                fotoPiloto.setAttribute('class', 'quartararo');
+                break;
+        }
+
+
+
+
+
+
+
+        var contenedor = document.getElementById('winner');
+        contenedor.appendChild(caja)
+        contenedor.appendChild(fotoPiloto);
+
+
+
+    }
+    comparatorTimer();
+    winner();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
