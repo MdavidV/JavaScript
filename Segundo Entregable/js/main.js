@@ -6,7 +6,7 @@ var ms = 0,
     pilotsCont = 0,
     btn = document.getElementById("btn-start"),
     pilotsNames = ['Pecco Bagnaia # 63', 'Jack Miller # 43', 'Aleix Espargaro # 41', 'Enea Bastianini # 23', 'Fabio Quartararo # 20'],
-    pilot01 = timerRandomize(0, 5),
+    pilot01 = timerRandomize(0, 5), // ELIGE UN PILOTO DE MANERA ALEATORIA
     pilotsTimer = [];
 
 
@@ -15,7 +15,7 @@ var ms = 0,
 
 const reload = document.getElementById('reload');
 
-reload.addEventListener('click', _ => { // el _ es para indicar la ausencia de parametros
+reload.addEventListener('click', _ => {  // FUNCION PARA REINICIAR LA PAGINA
     location.reload();
 });
 
@@ -30,7 +30,7 @@ do {
     pilotsCont++;
 } while (pilotsCont < 5);
 
-
+// GENERADOR DE TIEMPOS PARA 5 PILOTOS QUE SE GUARDAN EN EL ARRAY 
 
 
 
@@ -41,14 +41,14 @@ do {
 
 
 function timerRandomize(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
+    return Math.floor(Math.random() * (max - min)) + min;  // FUNCION PARA ALEATORIZAR UN NUMERO, ESTE GENERA LOS MILISEGUNDOS
 }
 
 
 function converterMsToMinutes() {
     parseFloat(min = (auxCont / 1000) / 60);
     min = min.toFixed(2);
-    convertedTimes = min + ':' + auxCont.toString().substr(0, 3);
+    convertedTimes = min + ':' + auxCont.toString().substr(0, 3); // CONVERSION DE UNIDADES
     return convertedTimes;
 }
 
@@ -62,7 +62,7 @@ function whoWins() {
                 auxCont = element;
             } else {
                 if (auxCont > element) {
-                    auxCont = element;
+                    auxCont = element;       // SACA EL TIEMPO MAS RAPIDO 
                 }
             }
             return auxCont;
@@ -72,7 +72,7 @@ function whoWins() {
         converterMsToMinutes();
         var caja = document.createElement('div');
         var fotoPiloto;
-        var ganador = document.createTextNode('Fastest lap:  ' + pilotsNames[pilot01] + ' - ' + convertedTimes);
+        var ganador = document.createTextNode('Fastest lap:  ' + pilotsNames[pilot01] + ' - ' + convertedTimes); 
 
         caja.appendChild(ganador);
         switch (pilot01) {
@@ -104,6 +104,7 @@ function whoWins() {
         }
 
 
+        // AGREGO LA FOTO DEL PILOTO SEGUN EL QUE HAYA ELEGIDO
 
 
 
@@ -112,6 +113,8 @@ function whoWins() {
         var contenedor = document.getElementById('winner');
         contenedor.appendChild(caja)
         contenedor.appendChild(fotoPiloto);
+
+        // CREO EL SECTION Y LOS DIVS 
 
 
 
