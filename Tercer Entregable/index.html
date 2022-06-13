@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Promedio Estudiantes</title>
+</head>
+
+<body>
+    <div class="cont">
+        <main>
+            <form action="" class="notas">
+                <h1>Average Simulator!</h1>
+                <div class="asignature">
+                    <label>WorkSheet # 1</label>
+                    <input type="text" id="work1" />
+                </div>
+                <div class="asignature">
+                    <label>WorkSheet # 2</label>
+                    <input type="text" id="work2" />
+                </div>
+                <div class="asignature">
+                    <label>WorkSheet # 3</label>
+                    <input type="text" id="work3" />
+                </div>
+                <div class="asignature">
+                    <label>WorkSheet # 4</label>
+                    <input type="text" id="work4" />
+                </div>
+                <div class="asignature">
+                    <label>Final Examl!</label>
+                    <input type="text" id="exam" />
+                </div>
+                <div class="btn-form">
+                    <input type="button" value="Know your average!" id="average-btn" class="average-btn"
+                        onclick="agarrarNotas()" />
+                </div>
+            </form>
+            <div class="total">
+                <div class="total-result">
+                    <h2 class="result-tittle">Total</h2>
+                    <div class="notas-total" id="total"></div>
+                </div>
+                <div class="average-result">
+                    <h2 class="result-tittle">Average</h2>
+                    <div class="average-total" id="ave"></div>
+                </div>
+                <div class="restart-btn">
+                    <button class="average-btn btn2" id="reload">Reload</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
