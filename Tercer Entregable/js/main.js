@@ -21,11 +21,11 @@ function agarrarNotas(){
     var totalAverage = totalResult + examResult;
     var contenedor = document.getElementById('total');
     var cont = document.getElementById('ave');
-    contenedor.appendChild(document.createTextNode('El total Acumulado de notas (70%) es: ' + totalResult));
+    contenedor.appendChild(document.createTextNode('El total Acumulado de notas (70%) es: ' + totalResult.toFixed(1)));
     contenedor.appendChild(document.createElement('br'));
     contenedor.appendChild(document.createElement('br'));
-    contenedor.appendChild(document.createTextNode('La nota del examen y su  porcentaje (30%) : ' + examResult));
-    cont.appendChild(document.createTextNode('Your total Average is: ' + totalAverage)); 
+    contenedor.appendChild(document.createTextNode('La nota del examen y su  porcentaje (30%) : ' + examResult.toFixed(1)));
+    cont.appendChild(document.createTextNode('Your total Average is: ' + totalAverage.toFixed(1))); 
 }
 
 
