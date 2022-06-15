@@ -94,7 +94,6 @@ function addToCart(id){
     };
 
     let producto = BBDD.find(producto => producto.id == id);
-    let precio = BBDD.find(producto => producto.id == id);
     cart.push(producto);
 
     let amount = parseInt(prompt(`
