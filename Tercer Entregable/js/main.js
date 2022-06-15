@@ -6,7 +6,7 @@ reload.addEventListener('click', _ => {  // FUNCION PARA REINICIAR LA PAGINA
     location.reload();
 });
 
-function agarrarNotas(){
+function agarrarNotas() {
     var nota1 = parseInt(document.getElementById('work1').value);
     var nota2 = parseInt(document.getElementById('work2').value);
     var nota3 = parseInt(document.getElementById('work3').value);
@@ -16,7 +16,7 @@ function agarrarNotas(){
     notas.push(nota1, nota2, nota3, nota4);
 
 
-    var totalResult = notas.reduce(reducer)/notas.length * 0.7;
+    var totalResult = notas.reduce(reducer) / notas.length * 0.7;
     var examResult = examen * 0.3;
     var totalAverage = totalResult + examResult;
     var contenedor = document.getElementById('total');
@@ -25,11 +25,11 @@ function agarrarNotas(){
     contenedor.appendChild(document.createElement('br'));
     contenedor.appendChild(document.createElement('br'));
     contenedor.appendChild(document.createTextNode('Exam grade and percentage (30%) : ' + examResult.toFixed(1)));
-    cont.appendChild(document.createTextNode('Your total Average is: ' + totalAverage.toFixed(1))); 
+    cont.appendChild(document.createTextNode('Your total Average is: ' + totalAverage.toFixed(1)));
 }
 
 
-      
+
 
 
 
