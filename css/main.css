@@ -21,12 +21,14 @@ h1{
     width: 80%;
     margin: 0 auto;
     background-color: #ccc;
-    height: 500px;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card{
-    width: 30%;
+    width: 25%;
     margin: 20px;
     border-radius: 6px;
     overflow: hidden;

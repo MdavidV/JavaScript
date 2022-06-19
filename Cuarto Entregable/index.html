@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Conversor De Monedas</title>
+  </head>
+  <body>
+    <main>
+      <div class="cont">
+        <div class="text">
+          <h1>Change your dollars to Cop</h1>
+          <p>One 'Peso' equals 0,00026 dollars</p>
+        </div>
+        <form action="">
+          <input type="text" placeholder=" Cop: " id="cop" />
+          <label for="dollar">Your COPS Equals : </label>
+          <input type="text" placeholder="Dollar: " readonly id="dollar" />
+          <input type="button" value="Convert!" id="btn" onclick="convert()" />
+        </form>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
