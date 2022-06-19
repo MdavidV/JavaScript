@@ -77,7 +77,7 @@ h1{
 
 .card .contenido a:hover{
     color: #000;
-    border: 1px solid #000;
+    border: 1px solid #ccc;
     background: #fff;
 }
 
