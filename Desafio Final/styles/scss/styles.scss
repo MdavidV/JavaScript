@@ -1,0 +1,28 @@
+$font-stack: "Bebas Neue", Arial;
+$Black: #0c0f0a;
+$First-Color: #C40044;
+$Second-Color: #FCFF40;
+$Third-Color: #41ead4;
+$White: #ffff;
+
+
+
+@import 'header', 'footer', 'main';
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: $font-stack; 
+    font-size: 26px;
+    // overflow: hidden;
+    
+}
+
+

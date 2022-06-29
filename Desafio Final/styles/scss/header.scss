@@ -1,0 +1,73 @@
+$font-stack: "Bebas Neue", Arial;
+$Black: #0c0f0a;
+$First-Color: #C40044;
+$Second-Color: #FCFF40;
+$Third-Color: #41ead4;
+$White: #ffff;
+
+
+.logo{
+  width: 80px;
+  img{
+    width: 100%;
+  }
+}
+
+
+header {
+  width: 100%;
+  height: auto;
+  background-color: $Black;
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .anchor-header-nav {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      a {
+        font-weight: 400;
+        padding: 10px 25px;
+        color: #fff;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+            color: $Second-Color;
+        }
+      }
+    }
+    .cart-icon {
+      margin-right: 45px;
+      width: 100px;
+      // height: 60px;
+      text-align: center;
+      position: relative;
+      .borderStyle {
+        a {
+          text-decoration: none;
+          background: none;
+          border: none;
+          cursor: pointer;
+          display: block;
+          i {
+            transition: all ease-in-out 300ms;
+            color: #fff;
+          }
+          .border-animated {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 63px;
+            width: 100%;
+            transition: all 0.2s;
+            &:hover{
+                border-bottom: 3px solid $Second-Color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
