@@ -9,8 +9,53 @@ const mainCartCloser = document.querySelector("#closeCart");
 const totalPrice = document.querySelector("#totalPrice");
 
 // Carrito
-let cart;
-const cartLs = JSON.parse(localStorage.getItem("cart"));
+
+
+const renderCart = () => {
+  cartContainer.innerHTML = "";
+
+  cart.forEach((item) => {
+    const div = document.createElement("div");
+    div.classList.add("product-in-cart");
+
+    div.innerHTML = `
+    <figure class="cart-product-img">
+      <img src="${item.img}" alt="">
+    </figure>
+
+    <p>${item.nombre}</p>
+    <p>${item.precio}$</p>
+
+    <button onclick="removeCart(${item.id})" class="btn-delete">
+      <i class="fas fa-trash-alt"></i>
+    </button>
+    `;
+
+    cartContainer.append(div);
+  });
+};
+
+const renderTotal = () => {
+  let total = 0;
+
+  cart.forEach((product) => {
+    total += product.precio;
+  });
+
+  totalPrice.innerText = total;
+};
+
+
+
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+window.onload(renderCart(), renderTotal());
+
+
+
+
+// PRODUCTOS Y LOGICA DEL CARRITO 
+
+
 
 renderProducts(".men-products-container");
 renderProducts(".women-products-container");
@@ -59,10 +104,10 @@ const addToCart = (id) => {
   let product = BBDD.find((item) => item.id === id);
   cart.push(product);
 
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem('cart', JSON.stringify(cart));
 
   renderCart();
-  rederTotal();
+  renderTotal();
 };
 
 const removeCart = (id) => {
@@ -70,59 +115,16 @@ const removeCart = (id) => {
   const index = cart.indexOf(item);
 
   cart.splice(index, 1);
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem('cart', JSON.stringify(cart));
 
   renderCart();
-  rederTotal();
+  renderTotal();
 };
 
-const renderCart = () => {
-  cartContainer.innerHTML = "";
 
-  cart.forEach((item) => {
-    const div = document.createElement("div");
-    div.classList.add("product-in-cart");
-
-    div.innerHTML = `
-    <figure class="cart-product-img">
-      <img src="${item.img}" alt="">
-    </figure>
-
-    <p>${item.nombre}</p>
-    <p>${item.precio}$</p>
-
-    <button onclick="removeCart(${item.id})" class="btn-delete">
-      <i class="fas fa-trash-alt"></i>
-    </button>
-    `;
-
-    cartContainer.append(div);
-  });
-};
-
-const rederTotal = () => {
-  let total = 0;
-
-  cart.forEach((product) => {
-    total += product.precio;
-  });
-
-  totalPrice.innerText = total;
-};
 
 //  EVENTOS
 
 cartOpener.addEventListener("click", openCart);
 cartCloser.addEventListener("click", closeCart);
 mainCartCloser.addEventListener("click", closeCart);
-
-// CONDICIONAL DEL LOCAL STORAGE
-
-if (cartLs) {
-  cart = cartLs;
-
-  renderCart();
-  rederTotal();
-} else {
-  cart = [];
-}
