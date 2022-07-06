@@ -14,36 +14,41 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="../js/slick/slick.css" />
+    <link rel="stylesheet" href="../js/slick/slick-theme.css" />
     <link rel="stylesheet" href="../styles/main.css" />
     <script
       src="https://kit.fontawesome.com/8abbc68bce.js"
       crossorigin="anonymous"
     ></script>
-    <title>G&V Shoes || CART </title>
+    <title>G&V Shoes</title>
   </head>
   <body>
     <!-- HEADER -->
     <header>
-        <nav class="nav header-nav">
-          <div class="anchor-header-nav">
-            <div class="logo">
-              <img src="../assets/Logo.png" alt="">
-            </div>
-            <a href="#">Collections</a>
-            <a href="#">Men</a>
-            <a href="#">Women</a>
-            <a href="#formContact">Contact</a>
-          </div>
-          <div class="cart-icon">
-            <div class="borderStyle">
-              <a href="pages/cart.html" class="cart-icon" id="cartIcon">
-                <i class="fa-solid fa-cart-shopping fa-xl"> </i>
-                <span class="border-animated"></span>
-              </a>
-            </div>
-          </div>
+      <section class="header-nav">
+        <nav class="nav-menu-header">
+          <a href="../index.html">Collections</a>
+          <a href="../index.html">Collections</a>
+          <a href="../index.html">Collections</a>
         </nav>
-      </header>
+
+        <div class="logo">
+          <img src="../assets/logo-dark.png" alt="" />
+        </div>
+
+        <div class="cart-icon-header">
+          <a href="pages/cart.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </section>
+    </header>
 
 
 <!-- MAIN -->
@@ -51,27 +56,32 @@
 
       <main class="main-cart">
         <section class="table-cart">
+          <h1>My Cart</h1>
             <table>
                 <thead>
                     <tr>
-                        <th>Product</th>
+                        <th>These shoes are almost yours</th>
                         <th>Price</th>
                         <th>Quantity</th>
                         <th>Subtotal</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr class="cart-item">
-                        <td class="product-remove"></td>
-                        <td class="product"></td>
-                        <td class="product-name"></td>
-                        <td class="product-price"></td>
-                        <td class="product-quantity"></td>
-                        <td class="product-subtotal"></td>
-                    </tr>
+                <tbody id="cartContainer">
+                  
+
                 </tbody>
             </table>
-        </section>
+          </section>
+          <br>
+          <hr>
+          <br>
+          <section class="subtotal">
+            <h3>Order Subtotal</h3>
+            <button class="checkoutBtn">Checkout</button>
+            <div class="text">
+              <p class="subtotal"></p>
+            </div>
+          </section>
       </main>
 
 
@@ -87,31 +97,21 @@
 
 
       <!-- FOOTER -->
-      <footer class="footer-fixed">
+      <footer class='footer-fixed'>
+  
         <section class="footer-media">
-          <div class="social-media">
-            <a href="#" class="messenger-icon">
-              <i class="fa-brands fa-facebook-messenger"></i>
-            </a>
-            <a href="#" class="instragram-icon">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="#" class="wsp-icon">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
+          <div class="logo-footer">
+            <img src="../assets/Logo.png" alt="" />
           </div>
-          <div class="nav nav-footer">
-            <div class="anchor-header-nav">
-              <a href="#main">Collections</a>
-              <a href="#">Men</a>
-              <a href="#">Women</a>
-            </div>
-          </div>
-          <div class="logo">
-            <img src="../assets/Logo.png" alt="">
+  
+          <div class="text-footer">
+            <p>All rights Reserved- Manuel Vina - 2022</p>
           </div>
         </section>
       </footer>
-    <script src="../js/test.js"></script>
+
+
+
+    <script src="js/main.js"></script>
   </body>
 </html>

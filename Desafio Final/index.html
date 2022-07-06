@@ -14,6 +14,13 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="js/slick/slick.css" />
+    <link rel="stylesheet" href="js/slick/slick-theme.css" />
     <link rel="stylesheet" href="styles/main.css" />
     <script
       src="https://kit.fontawesome.com/8abbc68bce.js"
@@ -25,116 +32,218 @@
   <body>
     <!-- HEADER -->
     <header>
-      <nav class="nav header-nav">
-        <div class="anchor-header-nav">
-          <div class="logo">
-            <img src="assets/Logo.png" alt="" />
-          </div>
-          <a href="#" class="closer">Collections</a>
-          <a href="#">Men</a>
-          <a href="#">Women</a>
-          <a href="#formContact">Contact</a>
+      <section class="header-nav">
+        <nav class="nav-menu-header">
+          <a href="#">Collections</a>
+          <a href="#">Collections</a>
+          <a href="#">Collections</a>
+        </nav>
+
+        <div class="logo">
+          <img src="assets/logo-dark.png" alt="" />
         </div>
-        <div class="cart-icon">
-          <div class="borderStyle">
-            <a href="#" class="cart-icon" id="cartIcon">
-              <i class="fa-solid fa-cart-shopping fa-xl"> </i>
-              <span class="border-animated"></span>
-            </a>
-          </div>
+
+        <div class="cart-icon-header">
+          <a id="cartIcon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
         </div>
-      </nav>
+      </section>
+
+      <section class="header-main" id="headerView">
+        <div class="text-header-main">
+          <h1 class="tittle-header">Lorem Ipsum Dolor Sit</h1>
+          <p class="subtittle-header">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            facere blanditiis <br />
+            corrupti fugit Adipisci quidem nostrum dolore. Molestias, mollitia.
+          </p>
+        </div>
+        <div class="btn-header">
+          <a href="#">View More!</a>
+        </div>
+      </section>
     </header>
 
     <!-- MAIN -->
-    <main id="main">
-      <div class="container">
-        <section class="men-products">
-          <div class="menp products-tittle">
-            <span class="noxz"></span>
-            <h3 class="mh3">Lastest Products for Men</h3>
-            <!-- <button class="lp-men" id="viewMoreProductsMen">View More</button> -->
-          </div>
-          <div class="men-products-container center"></div>
-        </section>
 
-        <section class="women-products">
-          <div class="womenp products-tittle">
-            <span class="noxz"></span>
-            <!-- <button class="lp-women" id="viewMoreProductsWomen">View More</button> -->
-            <h3 class="wh3">Lastest Products for Women</h3>
-          </div>
-          <div class="women-products-container"></div>
-        </section>
+    <main>
+      <section class="lastest-products-main"  id="mainViewL">
+        <h3>Lastest Products</h3>
+        <div class="slideshow">
+          <div class="product">
+            <img src="assets/lastest1.jpg" alt="" />
+            <div class="product-details">
+              <h2 class="product-name">Adidas Super Star.</h2>
 
-        <section class="cart-products">
-          <div id="cart" class="hidden">
-            <div class="products-tittle">
-              <button id="closeCart">
-                <i class="fas fa-times-circle"></i>
-              </button>
-              <span class="noxz"></span>
-              <h3 class="ch3">Carrito</h3>
-            </div>
-            <div id="cartContainer"></div>
-
-            <div class="price">
-              <p>Total: <span id="totalPrice"></span> $</p>
+              <a class="btn" href="">
+                <span class="text1">120$</span>
+                <span class="text2">
+                  Add to Cart
+                  <i class="fa-solid fa-cart-arrow-up"></i>
+                </span>
+              </a>
             </div>
           </div>
-        </section>
-      </div>
+
+          <div class="product">
+            <img src="assets/lastest2.jpg" alt="" />
+            <div class="product-details">
+              <h2 class="product-name">Adidas Super Star.</h2>
+
+              <a class="btn" href="">
+                <span class="text1">120$</span>
+                <span class="text2">
+                  Add to Cart
+                  <i class="fa-solid fa-cart-arrow-up"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="assets/3.png" />
+            <div class="product-details">
+              <h2 class="product-name">Adidas Super Star.</h2>
+
+              <a class="btn" href="">
+                <span class="text1">120$</span>
+                <span class="text2">
+                  Add to Cart
+                  <i class="fa-solid fa-cart-arrow-up"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="assets/lastest2.jpg" alt="" />
+            <div class="product-details">
+              <h2 class="product-name">Adidas Super Star.</h2>
+
+              <a class="btn" href="">
+                <span class="text1">120$</span>
+                <span class="text2">
+                  Add to Cart
+                  <i class="fa-solid fa-cart-arrow-up"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="assets/lastest1.jpg" alt="" />
+            <div class="product-details">
+              <h2 class="product-name">Adidas Super Star.</h2>
+
+              <a class="btn" href="">
+                <span class="text1">120$</span>
+                <span class="text2">
+                  Add to Cart
+                  <i class="fa-solid fa-cart-arrow-up"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="assets/3.png" />
+            <div class="product-details">
+              <h2 class="product-name">Adidas Super Star.</h2>
+
+              <a class="btn" href="">
+                <span class="text1">120$</span>
+                <span class="text2">
+                  Add to Cart
+                  <i class="fa-solid fa-cart-arrow-up"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="more-products" id="mainView">
+        <h3 class="tittle-main">More Products</h3>
+
+        <div class="products-main"></div>
+      </section>
+
+
+
+      <!--  CART -->
+
+
+    <div id="cart" class="hidden">
+        <section class="table-cart">
+          <div class="tittle-table">
+            <h1>My Cart</h1>
+            <button class="closer">
+              <i class="fa-solid fa-x"></i>
+            </button>
+          </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>These shoes are almost yours</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="cartContainer">
+                  
+      
+                </tbody>
+            </table>
+          </section>
+          <br>
+          <hr>
+          <br>
+          <section class="subtotal">
+            <h3>Order Subtotal</h3>
+            <button class="checkoutBtn">Checkout</button>
+            <div class="text">
+              <p class="subtotal" id="totalPrice"></p>
+            </div>
+          </section>
+    </div>
     </main>
 
-    <!-- FOOTER -->
+    <!-- footer -->
+
     <footer>
-      <section class="form-contact" id="formContact">
-        <form action="" class="footer-contact">
-          <h2 class="form-tittle">Please Write Us!</h2>
-          <div class="text-inputs">
-            <div class="input-group">
-              <input type="text" id="name" placeholder=" " />
-              <label for="name">Name</label>
-            </div>
-            <div class="input-group">
-              <input type="email" id="email" placeholder=" " />
-              <label for="email">Email</label>
-            </div>
-          </div>
-          <div class="textArea-form">
-            <textarea cols="30" rows="10" placeholder="Message"></textarea>
-          </div>
-          <div class="button-container">
-            <button class="btn" id="btn-send">Send Your Message</button>
-          </div>
-        </form>
+      <section class="contact-footer" id="footerView">
+        <div class="contact-text">
+          <h2 class="contact-tittle">Subscribe!</h2>
+          <p class="contact-subtittle">Write us for updates!</p>
+        </div>
+
+        <div class="contact-form">
+          <input type="email" id="email" placeholder=" " />
+          <label for="email">Your Email!</label>
+
+        </div>
+
+        <div class="btn-container">
+          <button class="btn-submit">Submit!</button>
+
+        </div>
       </section>
+
       <section class="footer-media">
-        <div class="social-media">
-          <a href="#" class="messenger-icon">
-            <i class="fa-brands fa-facebook-messenger"></i>
-          </a>
-          <a href="#" class="instragram-icon">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="#" class="wsp-icon">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
-        </div>
-        <div class="nav nav-footer">
-          <div class="anchor-header-nav">
-            <a href="#main">Collections</a>
-            <a href="#">Men</a>
-            <a href="#">Women</a>
-          </div>
-        </div>
-        <div class="logo">
+        <div class="logo-footer">
           <img src="assets/Logo.png" alt="" />
+        </div>
+
+        <div class="text-footer">
+          <p>All rights Reserved- Manuel Vina - 2022</p>
         </div>
       </section>
     </footer>
 
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/test.js"></script>
   </body>
 </html>

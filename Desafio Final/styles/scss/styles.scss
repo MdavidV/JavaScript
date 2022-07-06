@@ -1,8 +1,6 @@
 $font-stack: "Bebas Neue", Arial;
-$Black: #0c0f0a;
-$First-Color: #C40044;
-$Second-Color: #FCFF40;
-$Third-Color: #41ead4;
+$Black: #000;
+$First-Color: #f7f7f7;
 $White: #ffff;
 
 
@@ -21,8 +19,26 @@ $White: #ffff;
 body{
     font-family: $font-stack; 
     font-size: 26px;
-    // overflow: hidden;
-    
+    overflow-x: hidden;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 
+
+
+a{
+    color: $Black;
+    text-decoration: none;
+}
+
+
+
+.hidden{
+    display: none;
+}
+
+
+.visible{
+    display: block;
+}

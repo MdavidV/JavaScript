@@ -57,8 +57,6 @@ window.onload(renderCart(), renderTotal());
 
 
 
-renderProducts(".men-products-container");
-renderProducts(".women-products-container");
 
 const openCart = () => {
   const cartCont = document.querySelector("#cart");
@@ -82,19 +80,26 @@ const closeCart = () => {
   cartCont.classList.remove("visible");
 };
 
-function renderProducts(idDelContenedor) {
-  const container = document.querySelector(idDelContenedor);
+const renderProducts = () => {
+  const container = document.querySelector(".products-main");
 
   BBDD.forEach((product) => {
     let productHTML = `
-    <div class="card" id="${product.position}">
-        <img src="${product.img}" class="slider-img" />
-        <div class="card-details">
-          <h2 class="product-name">${product.nombre}</h2>
-          <p class="slider-review">${product.precio}$</p>
-        <button class="btn-send-card" id="${product.id}" onclick="addToCart(${product.id})">Add to Cart</button>
-      </div>
+
+    <div class="product">
+      <img src="${product.img}" />
+      <div class="product-details">
+        <h2 class="product-name">${product.nombre}</h2>
+
+      <button class="btn" onclick="addToCart(${product.id})">
+        <span class="text1">${product.precio}</span>
+        <span class="text2">
+          Add to Cart
+          <i class="fa-solid fa-cart-arrow-up"></i>
+        </span>
+      </button>
     </div>
+  </div>
     `;
     container.innerHTML += productHTML;
   });
